@@ -1,4 +1,4 @@
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
+alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 message = input("Enter a message here ")
 encryptedMessage =""
 key = input("Please enter a key: ")
@@ -8,7 +8,7 @@ for char in message:
 
     if char in alphabet:
         position = alphabet.find(char)
-        newPosition = (position+key) %26
+        newPosition = (position+key) %52
         encryptedMessage = encryptedMessage + alphabet [newPosition]
     else:
         encryptedMessage = encryptedMessage + char
